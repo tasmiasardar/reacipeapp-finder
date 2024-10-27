@@ -1,0 +1,54 @@
+form {
+  display: flex;
+  flex-direction: row; /* Change to row for horizontal alignment */
+  margin: 10px 0;
+}
+
+.error {
+  color: red; /* Red color for error messages */
+  font-size: 0.9em; /* Font size for error messages */
+}
+
+button {
+  margin-top: 0; /* Remove top margin to align with other elements */
+  margin-left: 5px; /* Optional: Add margin to space elements */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+button:hover {
+  background-color: #aa336a; /* Change to a darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.class {
+  color: white; /* White color for the app name */
+  margin-bottom: 5px; /* Space below the heading */
+  transition: color 0.3s ease; /* Transition for color change */
+}
+
+label {
+  display: block; /* Block display for label */
+  margin-bottom: 3px; /* Space below the label */
+  color: white; /* White label color */
+}
+
+input {
+  padding: 5px; /* Padding for input field */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 10px; /* Rounded corners */
+  margin-bottom: 5px; /* Space below the input */
+  margin-top: 0%;
+  width: 100%; /* Full width */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for focus */
+}
+
+input:focus {
+  border-color: #aa336a; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(102, 175, 233, .5); /* Add shadow effect on focus */
+}
+
+input.error {
+  border-color: red; /* Red border for error state */
+  box-shadow: none; /* Remove shadow if there's an error */
+}

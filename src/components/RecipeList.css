@@ -1,0 +1,27 @@
+/* src/RecipeList.css */
+.recipe-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .recipe-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Delay animation for each item */
+  .recipe-item:nth-child(1) { animation-delay: 0.1s; }
+  .recipe-item:nth-child(2) { animation-delay: 0.2s; }
+  .recipe-item:nth-child(3) { animation-delay: 0.3s; }
+  .recipe-item:nth-child(4) { animation-delay: 0.4s; }
+  .recipe-item:nth-child(5) { animation-delay: 0.5s; }
+  

@@ -1,0 +1,63 @@
+@import "../../App.css";
+
+
+@media screen and (min-width: 420px) {
+    .sc-category {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 24px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .sc-category {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .sc-category {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .sc-category {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.sc-category .category-itm {
+    background-color: #ffffff; /* Replace with your variable if necessary */
+    position: relative;
+    margin: 12px auto;
+    box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+    border-radius: 3px;
+    box-shadow: rgba(99, 99, 99, 0.09) 0px 2px 8px 0px;
+}
+
+.sc-category .category-itm-img {
+    height: 150px;
+    position: relative;
+}
+
+.sc-category .category-itm-img img {
+    padding: 12px;
+}
+
+.sc-category .category-itm-img:hover img {
+    transform: scale(0.8);
+}
+
+.sc-category .category-itm-title {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    padding: 1px 8px;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
+}
+
+.sc-category .category-itm:hover .category-itm-title {
+    opacity: 1;
+    border-radius: 2px;
+}
