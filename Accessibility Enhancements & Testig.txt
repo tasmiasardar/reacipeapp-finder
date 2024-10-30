@@ -1,0 +1,41 @@
+### Accessibility Enhancements and Testing Coverage Report
+
+**Project Overview**  
+RecipeBox is a dynamic and responsive food recipe application built with React. It features real-time recipe fetching, category filtering, and robust offline functionality as a Progressive Web App (PWA). The application is designed to provide an optimal user experience across various devices and accessibility needs.
+
+---
+
+**Accessibility Enhancements**  
+To ensure the application aligns with the Web Content Accessibility Guidelines (WCAG), several key improvements were implemented:
+
+1. **Semantic HTML**  
+   **Use of Semantic Elements**: HTML5 elements such as `<header>`, `<nav>`, `<main>`, and `<footer>` were utilized to create a meaningful page structure, enhancing navigation for screen readers and overall accessibility.
+
+2. **ARIA Attributes**  
+   **ARIA Labels and Roles**: Added `aria-label`, `aria-labelledby`, and `aria-describedby` attributes to interactive elements like buttons and recipe modals, providing clear descriptions for screen readers.  
+   **Role Attributes**: Implemented `role="button"` and `role="dialog"` to improve the identification of interactive elements.
+
+3. **Keyboard Navigability**  
+   **Focus Management**: Ensured that recipe dialogs and forms are accessible via keyboard, with appropriate focus management when these elements are opened or closed.  
+   **Tab Index**: Applied `tabindex="0"` to ensure that interactive elements are navigable using the keyboard.
+
+4. **Visual Accessibility**  
+   **Contrast Ratios**: Ensured that text and background color combinations meet WCAG standards for contrast ratios, improving readability for users with visual impairments.  
+   **Text Resizing**: Ensured that text can be resized up to 200% without loss of content or functionality.
+
+---
+
+**Testing Coverage**  
+To enhance code reliability and catch potential issues early, extensive testing was conducted using React Testing Library and Jest:
+
+1. **Unit Testing**  
+   **Recipe Card Component**: Verified that the component renders correctly and handles user interactions as expected.
+
+2. **Integration Testing**  
+   **RecipeApp Component**: Tested within the context of the RecipeProvider to ensure that state management and API calls function correctly.
+
+---
+
+**Conclusion**  
+By implementing these accessibility enhancements and conducting rigorous testing, RecipeBox ensures a user-friendly and reliable experience for all users, including those with disabilities.
+ The application is well-equipped to provide seamless access to a variety of recipes, both online and offline.
