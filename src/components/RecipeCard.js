@@ -1,16 +1,36 @@
-// RecipeCard.js
-import React from 'react';
+import React, { memo } from 'react';
 
-const RecipeCard = ({ title, ingredients, onClick }) => (
-  <div>
-    <h2>{title}</h2>
-    <ul>
-      {ingredients.map((ingredient, index) => (
-        <li key={index}>{ingredient}</li>
-      ))}
-    </ul>
-    <button onClick={onClick}>View Recipe</button>
-  </div>
-);
+const Card = memo(({ data = [] }) => {  
+  console.log(data);
 
-export default RecipeCard;
+  return (
+    <div className='card-container'>
+      {data.map((curItem, index) => {
+        if (!curItem.urlToImage) {
+          return null;
+        } 
+          return (
+            <div key={index} className='card'>
+              <img src={curItem.urlToImage} alt="FoodRecipe" /> 
+              <div className='card-content'>
+                <a
+                  className='title'
+                  href={curItem.url}
+                  target='_blank'
+                  rel='nonopener noreferrer'
+                >
+                  {curItem.title}
+                </a>
+                <p>{curItem.description}</p>
+                <button onClick={() => window.open(curItem.url, "_blank")}>
+                  Read more
+                </button>
+              </div>
+            </div>
+          );
+      })}
+    </div>
+  );
+});
+
+export default Card;
